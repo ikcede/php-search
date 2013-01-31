@@ -32,6 +32,7 @@ if($search_type == "simple") {
 	// Simple search: will match all get values as search items
 	// Everything just gets added in the order it is found on $_GET
 	foreach ($_GET as $key=>$val) {
+		$key = trim($key);
 		if(array_key_exists($key,$fields)) {
 			$con = "AND";
 			$type = "=";
