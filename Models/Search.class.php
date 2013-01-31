@@ -35,7 +35,7 @@ class Search {
 			return $this->expression = "`".$field . "` $type " . $this->__clean($data);
 		}
 		if($priority > 0) {
-			return $this->expression = $this->__wrapParens() . 
+			return $this->expression = $this->wrapParens() . 
 				" $con `$field` $type " . $this->__clean($data);
 		}
 		return $this->expression = $this->expression . " $con `$field` $type " . $this->__clean($data);
